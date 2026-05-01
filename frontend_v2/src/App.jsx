@@ -19,7 +19,7 @@ function App() {
 
   const fetchUser = async () => {
     try {
-      const response = await fetch('http://localhost:5001/api/v2/auth/me', {
+      const response = await fetch('https://team-task-manager-6e7h.onrender.com/api/v2/auth/me', {
         headers: {
           'Authorization': `Bearer ${token}`
         }

@@ -16,7 +16,7 @@ function Dashboard({ token }) {
 
   const fetchDashboard = async () => {
     try {
-      const response = await fetch('http://localhost:5001/api/v2/my-tasks', {
+      const response = await fetch('https://team-task-manager-6e7h.onrender.com/api/v2/my-tasks', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       const data = await response.json();

@@ -13,7 +13,7 @@ function Projects({ token }) {
 
   const fetchProjects = async () => {
     try {
-      const response = await fetch('http://localhost:5001/api/v2/projects', {
+      const response = await fetch('https://team-task-manager-6e7h.onrender.com/api/v2/projects', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       const data = await response.json();
@@ -28,7 +28,7 @@ function Projects({ token }) {
   const createProject = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5001/api/v2/projects', {
+      const response = await fetch('https://team-task-manager-6e7h.onrender.com/api/v2/projects', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -22,7 +22,7 @@ function ProjectDetail({ token }) {
 
   const fetchTasks = async () => {
     try {
-      const response = await fetch(`http://localhost:5001/api/v2/projects/${id}/tasks`, {
+      const response = await fetch(`https://team-task-manager-6e7h.onrender.com/api/v2/projects/${id}/tasks`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       const data = await response.json();
@@ -36,7 +36,7 @@ function ProjectDetail({ token }) {
 
   const fetchUsers = async () => {
     try {
-      const response = await fetch('http://localhost:5001/api/v2/users', {
+      const response = await fetch('https://team-task-manager-6e7h.onrender.com/api/v2/users', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       const data = await response.json();
@@ -49,7 +49,7 @@ function ProjectDetail({ token }) {
   const createTask = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://localhost:5001/api/v2/projects/${id}/tasks`, {
+      const response = await fetch(`https://team-task-manager-6e7h.onrender.com/api/v2/projects/${id}/tasks`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -69,7 +69,7 @@ function ProjectDetail({ token }) {
 
   const updateTaskStatus = async (taskId, newStatus) => {
     try {
-      await fetch(`http://localhost:5001/api/v2/tasks/${taskId}/status`, {
+      await fetch(`https://team-task-manager-6e7h.onrender.com/api/v2/tasks/${taskId}/status`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

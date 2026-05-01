@@ -17,7 +17,7 @@ function Signup() {
     setSuccess('');
 
     try {
-      const response = await fetch('http://localhost:5001/api/v2/auth/signup', {
+      const response = await fetch('https://team-task-manager-6e7h.onrender.com/api/v2/auth/signup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password, full_name: fullName })

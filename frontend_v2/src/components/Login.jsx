@@ -14,7 +14,7 @@ function Login({ setToken, setUser }) {
     setError('');
 
     try {
-      const response = await fetch('http://localhost:5001/api/v2/auth/login', {
+      const response = await fetch('https://team-task-manager-6e7h.onrender.com/api/v2/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password })
